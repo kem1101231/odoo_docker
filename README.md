@@ -1,4 +1,4 @@
-# Odoo 10 Docker Configured with External Addons
+# Odoo Docker Configured with External Addons
 
 To add apps and modules as external addons:
 
@@ -13,6 +13,6 @@ To run Odoo on Docker
 4. Docker will build the images and container for Odoo.
 5. After the build is complete, run the command "docker-compose up".
 6. This will start the container build earlier.
-7. Open your browser and access 'localhost:82'
+7. Open your browser and access 'localhost'
 8. Done. Odoo is now running on docker.
 

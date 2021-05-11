@@ -1,10 +1,8 @@
 version: "3.9"
    
 services:
-  postgres_odoo:
+  postgres_odoo_14:
     image: postgres
-    # volumes:
-    #   - ./data/db:/var/lib/postgresql/data
     environment:
       - POSTGRES_DB=odoo
       - POSTGRES_USER=odoo
@@ -16,17 +14,17 @@ services:
       - "5433"  
 
 
-  odoo:
+  odoo_14:
     build:
       context: .
       dockerfile: compose_config/Dockerfile
     image: odoo_with_ext_server_web
-    command: python /opt/odoo/odoo-10.0/odoo-bin -c /etc/odoo/odoo-server.conf
+    command: python3 /opt/odoo/odoo-bin -c /etc/odoo/odoo-server.conf
     volumes:
       - type: bind
         source: ./external_addons/
         target: /opt/odoo/external_addons
     ports:
-      - "82:8069"
+      - "80:8069"
     depends_on:
-      - postgres_odoo
+      - postgres_odoo_14

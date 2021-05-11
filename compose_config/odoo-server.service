@@ -9,8 +9,8 @@ PermissionsStartOnly=true
 SyslogIdentifier=odoo-server
 User=odoo
 Group=odoo
-ExecStart=/opt/odoo/odoo-10.0/odoo-bin --config=/etc/odoo/odoo-server.conf --addons-path=/opt/odoo/odoo-10.0/addons/,/opt/odoo/external_addons/
-WorkingDirectory=/opt/odoo/odoo-10.0/
+ExecStart=/opt/odoo/odoo-bin --config=/etc/odoo/odoo-server.conf --addons-path=/opt/odoo/addons/,/opt/odoo/external_addons/
+WorkingDirectory=/opt/odoo/
 StandardOutput=journal+console
 
 [Install]
